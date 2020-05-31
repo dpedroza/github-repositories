@@ -1,10 +1,10 @@
-package com.dmap.githubrepositories
+package com.dmap.githubrepositories.presentation
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.dmap.githubrepositories.R
 import kotlinx.android.synthetic.main.item_repository.view.*
 
 class RepositoryAdapter: RecyclerView.Adapter<RepositoryAdapter.RepositoryViewHolder>() {
@@ -17,7 +17,9 @@ class RepositoryAdapter: RecyclerView.Adapter<RepositoryAdapter.RepositoryViewHo
         val context = parent.context
         val layout = R.layout.item_repository
         val view = LayoutInflater.from(context).inflate(layout, parent, false)
-        return RepositoryViewHolder(view)
+        return RepositoryViewHolder(
+            view
+        )
     }
 
     override fun onBindViewHolder(holder: RepositoryViewHolder, position: Int) {
