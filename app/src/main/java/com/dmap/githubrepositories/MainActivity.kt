@@ -12,7 +12,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupRepositoryRecyclerView()
+    }
 
+    /**
+     * RepositoryRecyclerView shows a list of repositories
+     */
+    private fun setupRepositoryRecyclerView() {
         val layoutManager = LinearLayoutManager(this)
         val adapter = RepositoryAdapter()
 
