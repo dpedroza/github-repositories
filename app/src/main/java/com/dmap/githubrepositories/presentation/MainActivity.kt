@@ -1,9 +1,10 @@
-package com.dmap.githubrepositories
+package com.dmap.githubrepositories.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dmap.githubrepositories.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +21,8 @@ class MainActivity : AppCompatActivity() {
      */
     private fun setupRepositoryRecyclerView() {
         val layoutManager = LinearLayoutManager(this)
-        val adapter = RepositoryAdapter()
+        val adapter =
+            RepositoryAdapter()
 
         repositoryRecyclerView = findViewById<RecyclerView>(R.id.recycler_view_repositories).apply {
             this.layoutManager = layoutManager
